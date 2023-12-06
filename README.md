@@ -14,11 +14,11 @@ This extension is being reviewed by google to be added to the Chrome Web Store E
 4. Click load unpacked <br> ![image](https://github.com/TayneB/duck-collector-extension/blob/main/README-Images/3-load-unpacked.png)
 6. Select the duck-collectors folder from where this extension was downloaded or extracted to <br> ![image](https://github.com/TayneB/duck-collector-extension/blob/main/README-Images/4-selected-unpacked.png)
 
-7. Make sure the extension is enabled <br> ![image](https://github.com/manaia-2023/duck-collector-extension/assets/124834636/dd75e207-9f38-4724-8b82-fc5c6846d355) *This is also how you disable the extension when you want the ducks to chill out
+7. Make sure the extension is enabled <br> ![image](https://github.com/TayneB/duck-collector-extension/blob/main/README-Images/5-turn-on-extension.png) *This is also how you disable the extension when you want the ducks to chill out
 8. Congrats! Its installed, now you need to login :)
 
 ## Logging In  
-1. After making an account on [Duck Finderz](https://duck-finderz.pushed.nz/) and signing in, grab your username <br> ![image](https://github.com/manaia-2023/duck-collector-extension/assets/124834636/f109c829-03ef-4058-a49a-9d66b06b94f4)
+1. After making an account on [Duck Finderz](https://duck-finderz.pushed.nz/) and signing in, grab your username <br> ![image](https://github.com/TayneB/duck-collector-extension/blob/main/README-Images/6-get-username.png)
 2. Use that username to log into the duck-collectors chrome extension popup
 - the extension can be found in the extensions dropdown <br> ![image](https://github.com/manaia-2023/duck-collector-extension/assets/124834636/673cc505-c46d-4377-9d3e-615af1fe6a77) ![image](https://github.com/manaia-2023/duck-collector-extension/assets/124834636/e27f65cd-ee86-404d-b838-1274f1875d76) ![image](https://github.com/manaia-2023/duck-collector-extension/assets/124834636/580af02a-993b-4bfe-8b37-99e6852f10b5)
 3. Once logged in you can start collecting ducks! You can view your collection in [Duck Finderz](https://duck-finderz.pushed.nz/)
