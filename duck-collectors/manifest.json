@@ -1,0 +1,58 @@
+{
+  "name": "Duck Collection",
+  "version": "0.0.1",
+  "description": "Duck Collection hides ducks in webpages so you can find and collect them",
+  "permissions": ["storage", "*://localhost/*", "offscreen", "*://duck-finderz.pushed.nz/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["*://localhost/*", "*://duck-finderz.pushed.nz/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/collected.png",
+        "assets/quack.mp3",
+        "assets/gym-duck.png",
+        "assets/bow-duck.png",
+        "assets/default-duck.png",
+        "assets/fez-duck.png",
+        "assets/golden-duck.png",
+        "assets/green-duck.png",
+        "assets/red-duck.png",
+        "assets/knife-duck.png",
+        "assets/jojo_duck-removebg-preview.png",
+        "assets/rubber-duck.png",
+        "assets/zebra-duck.png",
+        "assets/mike-duck.png",
+        "assets/gojo-duck.png",
+        "assets/blue-mike-duck.png",
+        "assets/ghost-duck.png",
+        "assets/duck-escaping.mp3",
+        "assets/gym-duck-gruntier.mp3",
+        "assets/fez-duck-riff.mp3",
+        "assets/knife-duck-draw.mp3",
+       "assets/zebra-duck-babyzebra-call.mp3",
+       "assets/rubber-duck-pop.mp3",
+       "assets/jojo-duck-bing-bong.mp3",
+       "assets/knife-duck-highres.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/knife-duck-highres.png",
+      "24": "assets/knife-duck-highres.png",
+      "32": "assets/knife-duck-highres.png"
+    },
+    "default_title": "Duck Collection",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3
+}

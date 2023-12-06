@@ -1,0 +1,24 @@
+<link href="popup.css" rel="stylesheet" type="text/css" />
+<script type="module" src="popup.js"></script>
+
+<div class="container">
+  <div>
+    <div class="title">Start looking for Ducks!</div>
+    <div class="userLogin" id="userLoginSection">
+      <label class="label" for="duckHunter">Username:</label>
+      <input
+        class="usernameInput"
+        type="text"
+        id="duckHunter"
+        placeholder="Duck finderz username"
+      />
+      <button id="setUsername">Login</button>
+      <button id="cancelEditUsername">Cancel</button>
+    </div>
+
+    <div class="userLogin" id="loggedInSection" style="display: none">
+      <span id="loggedInUsername" class="loggedUsername"></span>
+      <button id="editUsername" class="editButton">Edit</button>
+    </div>
+  </div>
+</div>

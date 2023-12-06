@@ -1,0 +1,31 @@
+.container {
+  min-width: 14.5rem;
+  min-height: 5.9rem;
+  color: #314d3e;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem 0rem 0.5rem;
+}
+
+.label {
+  display: block;
+}
+
+.userLogin {
+  padding-left: 0.5rem;
+  display: block;
+}
+
+.loggedUsername {
+  font-size: medium;
+  display: block;
+  padding-bottom: 0.7rem;
+  padding-top: 0.3rem;
+}
+
+.usernameInput {
+  margin-bottom: 0.3rem;
+}
