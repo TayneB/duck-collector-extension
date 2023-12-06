@@ -20,7 +20,7 @@ This extension is being reviewed by google to be added to the Chrome Web Store E
 ## Logging In  
 1. After making an account on [Duck Finderz](https://duck-finderz.pushed.nz/) and signing in, grab your username <br> ![image](https://github.com/TayneB/duck-collector-extension/blob/main/README-Images/6-get-username.png)
 2. Use that username to log into the duck-collectors chrome extension popup
-- the extension can be found in the extensions dropdown <br> ![image](https://github.com/manaia-2023/duck-collector-extension/assets/124834636/673cc505-c46d-4377-9d3e-615af1fe6a77) ![image](https://github.com/manaia-2023/duck-collector-extension/assets/124834636/e27f65cd-ee86-404d-b838-1274f1875d76) ![image](https://github.com/manaia-2023/duck-collector-extension/assets/124834636/580af02a-993b-4bfe-8b37-99e6852f10b5)
+- the extension can be found in the extensions dropdown <br> ![image](https://github.com/TayneB/duck-collector-extension/blob/main/README-Images/7-extension.png) ![image](https://github.com/TayneB/duck-collector-extension/blob/main/README-Images/8-duck-collection.png) ![image](https://github.com/TayneB/duck-collector-extension/blob/main/README-Images/9-duck-collection.png)
 3. Once logged in you can start collecting ducks! You can view your collection in [Duck Finderz](https://duck-finderz.pushed.nz/)
 
 ## Collecting Ducks!
