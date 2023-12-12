@@ -1,6 +1,6 @@
 {
-  "name": "Duck Collection",
-  "version": "0.0.1",
+  "name": "Duck Collection DEVELOPMENT",
+  "version": "1.0.1",
   "description": "Duck Collection hides ducks in webpages so you can find and collect them",
   "permissions": ["storage", "*://localhost/*", "offscreen", "*://duck-finderz.pushed.nz/*"],
   "background": {
