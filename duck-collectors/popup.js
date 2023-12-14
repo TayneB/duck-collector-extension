@@ -12,6 +12,27 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
+  const duckSwitch = document.getElementById('duckSwitch')
+  let ducksEnabled = true
+  duckSwitch.addEventListener('click', function () {
+    if (!ducksEnabled) {
+      duckSwitchOn()
+    } else if (ducksEnabled) {
+      duckSwitchOff()
+    }
+    console.log(ducksEnabled)
+  })
+
+  function duckSwitchOff() {
+    ducksEnabled = false
+  }
+
+  function duckSwitchOn() {
+    ducksEnabled = true
+  }
+})
+
+document.addEventListener('DOMContentLoaded', function () {
   const userLoginSection = document.getElementById('userLoginSection')
   const loggedInSection = document.getElementById('loggedInSection')
   const usernameInput = document.getElementById('duckHunter')
