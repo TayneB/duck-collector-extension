@@ -7,6 +7,15 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
   }
 })
 
+chrome.storage.onChanged.addListener(function (changes, namespace) {
+  for (const key in changes) {
+    if (key === 'ducksEnabled') {
+      const ducksEnabled = changes[key].newValue
+      console.log('Ducks Enabled:', ducksEnabled)
+    }
+  }
+})
+
 chrome.runtime.onMessage.addListener(function (message) {
   chrome.storage.sync.get(['username'], function (result) {
     const username = result.username || 'duckhunter'

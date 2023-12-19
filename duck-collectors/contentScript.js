@@ -111,13 +111,6 @@
     },
   ]
 
-  chrome.runtime.onMessage.addListener(function (message) {
-    if (message.type === 'duckSwitch') {
-      ducksEnabled = message.ducksEnabled
-      console.log(message.ducksEnabled)
-    }
-  })
-
   const newDuckLoaded = async () => {
     const duckExists = document.getElementsByClassName('duck-collect')[0]
     const elems = document.body.getElementsByTagName('*')
@@ -125,6 +118,11 @@
       Math.floor(Math.random() * (0 - elems.length + 1)) + elems.length
 
     const randomElement = elems[elemRandomIndex]
+
+    chrome.storage.sync.get(['ducksEnabled'], function (result) {
+      ducksEnabled = result.ducksEnabled
+      console.log(ducksEnabled)
+    })
 
     if (!duckExists && ducksEnabled) {
       const duck = document.createElement('img')
@@ -158,7 +156,7 @@
         /* chrome.runtime.sendMessage({
           type: 'duck-NOT-clicked',
         }) */
-      }, 3000)
+      }, 1000)
 
       const duckClicked = (event) => {
         event.stopPropagation()
@@ -185,6 +183,10 @@
 
       whereDuckHidden.appendChild(duck)
       duck.addEventListener('click', (event) => duckClicked(event))
+    } else if (!ducksEnabled) {
+      setTimeout(() => {
+        newDuckLoaded()
+      }, 1000)
     }
   }
   newDuckLoaded()
