@@ -124,6 +124,10 @@
       console.log(ducksEnabled)
     })
 
+    if (ducksEnabled === undefined) {
+      ducksEnabled = true
+    }
+
     if (!duckExists && ducksEnabled) {
       const duck = document.createElement('img')
 
