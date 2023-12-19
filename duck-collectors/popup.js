@@ -14,22 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const duckSwitch = document.getElementById('duckSwitch')
   let ducksEnabled = true
-  duckSwitch.addEventListener('click', function () {
-    if (!ducksEnabled) {
-      duckSwitchOn()
-    } else if (ducksEnabled) {
-      duckSwitchOff()
-    }
+  duckSwitch.addEventListener('click', function (event) {
+    ducksEnabled = !ducksEnabled
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      chrome.tabs.sendMessage(tabs[0].id, {
+        type: 'duckSwitch',
+        ducksEnabled: ducksEnabled,
+      })
+    })
     console.log(ducksEnabled)
   })
-
-  function duckSwitchOff() {
-    ducksEnabled = false
-  }
-
-  function duckSwitchOn() {
-    ducksEnabled = true
-  }
 })
 
 document.addEventListener('DOMContentLoaded', function () {
