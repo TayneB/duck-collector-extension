@@ -52,7 +52,7 @@
     { id: 13, image: 'gojo-duck.png', rarity: 2, duckSound: 'quack.mp3' },
     { id: 14, image: 'blue-mike-duck.png', rarity: 2, duckSound: 'quack.mp3' },
   ] */
-
+  let ducksEnabled = true
   let duckImages = []
 
   const duckRarity1 = [
@@ -119,7 +119,16 @@
 
     const randomElement = elems[elemRandomIndex]
 
-    if (!duckExists) {
+    await chrome.storage.sync.get(['ducksEnabled'], function (result) {
+      ducksEnabled = result.ducksEnabled
+      console.log(ducksEnabled)
+    })
+
+    if (ducksEnabled === undefined) {
+      ducksEnabled = true
+    }
+
+    if (!duckExists && ducksEnabled) {
       const duck = document.createElement('img')
 
       let randomRarityDecimal = Math.random()
@@ -151,7 +160,7 @@
         /* chrome.runtime.sendMessage({
           type: 'duck-NOT-clicked',
         }) */
-      }, 10000)
+      }, 1000)
 
       const duckClicked = (event) => {
         event.stopPropagation()
@@ -178,8 +187,11 @@
 
       whereDuckHidden.appendChild(duck)
       duck.addEventListener('click', (event) => duckClicked(event))
+    } else if (!ducksEnabled) {
+      setTimeout(() => {
+        newDuckLoaded()
+      }, 1000)
     }
   }
-
   newDuckLoaded()
 })()
