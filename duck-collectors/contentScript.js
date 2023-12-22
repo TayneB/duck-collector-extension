@@ -119,7 +119,7 @@
 
     const randomElement = elems[elemRandomIndex]
 
-    chrome.storage.sync.get(['ducksEnabled'], function (result) {
+    await chrome.storage.sync.get(['ducksEnabled'], function (result) {
       ducksEnabled = result.ducksEnabled
       console.log(ducksEnabled)
     })
