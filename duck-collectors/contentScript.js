@@ -52,7 +52,7 @@
     { id: 13, image: 'gojo-duck.png', rarity: 2, duckSound: 'quack.mp3' },
     { id: 14, image: 'blue-mike-duck.png', rarity: 2, duckSound: 'quack.mp3' },
   ] */
-  let ducksEnabled = true
+  let ducksEnabled = false
   let duckImages = []
 
   const duckRarity1 = [
@@ -112,13 +112,6 @@
   ]
 
   const newDuckLoaded = async () => {
-    const duckExists = document.getElementsByClassName('duck-collect')[0]
-    const elems = document.body.getElementsByTagName('*')
-    const elemRandomIndex =
-      Math.floor(Math.random() * (0 - elems.length + 1)) + elems.length
-
-    const randomElement = elems[elemRandomIndex]
-
     await chrome.storage.sync.get(['ducksEnabled'], function (result) {
       ducksEnabled = result.ducksEnabled
       console.log(ducksEnabled)
@@ -127,6 +120,13 @@
     if (ducksEnabled === undefined) {
       ducksEnabled = true
     }
+
+    const duckExists = document.getElementsByClassName('duck-collect')[0]
+    const elems = document.body.getElementsByTagName('*')
+    const elemRandomIndex =
+      Math.floor(Math.random() * (0 - elems.length + 1)) + elems.length
+
+    const randomElement = elems[elemRandomIndex]
 
     if (!duckExists && ducksEnabled) {
       const duck = document.createElement('img')
