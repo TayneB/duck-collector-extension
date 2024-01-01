@@ -178,13 +178,13 @@
           })
           duck.style.cursor = 'auto'
           notCollected = false
-          chrome.runtime.openPopup()
           clearTimeout(countdownTimeout)
           setTimeout(() => {
             duck.remove()
             notCollected = true
             newDuckLoaded()
           }, 3000)
+          // chrome.runtime.openPopup()
         } else if (!notCollected) {
           console.log('logged out sound already played')
         }
