@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   const duckSwitch = document.getElementById('duckSwitch')
+  const areDucks = document.getElementsByClassName('areDucks')
   let ducksEnabled = true
 
   chrome.storage.sync.get('ducksEnabled', function (data) {

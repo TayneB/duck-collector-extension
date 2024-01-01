@@ -19,6 +19,11 @@
   display: block;
 }
 
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+
 .loggedUsername {
   font-size: medium;
   display: block;

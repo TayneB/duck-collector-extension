@@ -22,6 +22,8 @@ chrome.runtime.onMessage.addListener(function (message) {
     if (message.type === 'duck-clicked') {
       playSound(message.duckSound)
       duckData(message.duckId, username)
+    } else if (message.type === 'logged-out') {
+      playSound(message.loggedOutSound)
     } else if (message.type === 'duck-NOT-clicked') {
       playSound('assets/duck-escaping.mp3')
     }

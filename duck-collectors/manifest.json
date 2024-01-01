@@ -40,7 +40,9 @@
        "assets/zebra-duck-babyzebra-call.mp3",
        "assets/rubber-duck-pop.mp3",
        "assets/jojo-duck-bing-bong.mp3",
-       "assets/knife-duck-highres.png"
+       "assets/knife-duck-highres.png",
+       "assets/logged-out-notification.png",
+       "assets/logged-out-sad-trombone.mp3"
       ],
       "matches": ["<all_urls>"]
     }
