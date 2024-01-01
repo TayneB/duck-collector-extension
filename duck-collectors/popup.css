@@ -102,5 +102,6 @@ input:checked + .slider:before {
 .duckfinderz-link {
   display: flex;
   align-items: center;
-  padding: 0 0 0.5rem 0.5rem;
+  font-weight: bold;
+  padding: 0.25rem 0 0.5rem 0.5rem;
 }
