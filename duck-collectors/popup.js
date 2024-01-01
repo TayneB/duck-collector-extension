@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   chrome.storage.sync.get('ducksEnabled', function (data) {
     ducksEnabled = data.ducksEnabled !== undefined ? data.ducksEnabled : true
     duckSwitch.checked = ducksEnabled
+    updateDucksMessage()
   })
 
   duckSwitch.addEventListener('click', function (event) {
@@ -37,7 +38,18 @@ document.addEventListener('DOMContentLoaded', function () {
     chrome.storage.sync.set({ ducksEnabled: ducksEnabled })
 
     console.log(ducksEnabled)
+    updateDucksMessage()
   })
+
+  function updateDucksMessage() {
+    const duckMessage = document.getElementById('areDucks')
+
+    if (ducksEnabled) {
+      duckMessage.innerText = 'Ducks!'
+    } else {
+      duckMessage.innerText = 'No Ducks 😔'
+    }
+  }
 })
 
 // keeping this here as a semi-working solution

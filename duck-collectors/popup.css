@@ -105,3 +105,7 @@ input:checked + .slider:before {
   font-weight: bold;
   padding: 0.25rem 0 0.5rem 0.5rem;
 }
+
+.areDucks {
+  padding-left: 0.25rem;
+}
