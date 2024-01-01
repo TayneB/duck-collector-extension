@@ -2,7 +2,7 @@
   "name": "Duck Collection DEVELOPMENT",
   "version": "1.0.2",
   "description": "Duck Collection hides ducks in webpages so you can find and collect them",
-  "permissions": ["storage", "*://localhost/*", "offscreen", "*://duck-finderz.pushed.nz/*"],
+  "permissions": ["storage", "*://localhost/*", "offscreen", "*://duck-finderz.pushed.nz/*", "tabs"],
   "background": {
     "service_worker": "background.js"
   },
@@ -40,7 +40,9 @@
        "assets/zebra-duck-babyzebra-call.mp3",
        "assets/rubber-duck-pop.mp3",
        "assets/jojo-duck-bing-bong.mp3",
-       "assets/knife-duck-highres.png"
+       "assets/knife-duck-highres.png",
+       "assets/logged-out-notification.png",
+       "assets/logged-out-sad-trombone.mp3"
       ],
       "matches": ["<all_urls>"]
     }

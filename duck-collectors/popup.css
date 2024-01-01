@@ -19,6 +19,11 @@
   display: block;
 }
 
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+
 .loggedUsername {
   font-size: medium;
   display: block;
@@ -92,4 +97,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.duckfinderz-link {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 0.25rem 0 0.5rem 0.5rem;
+}
+
+.areDucks {
+  padding-left: 0.25rem;
 }
